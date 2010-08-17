@@ -1,0 +1,13 @@
+
+	Mitm - Man in the middle tool written in C
+==============================================================
+
+ This tool can be use to perform a man in the middle using ARP
+ poisoning on two given hosts.
+
+ Using osdep, a tunnel creation library which is part of the 
+ aircrack project, it can set up an interface (mitm0) in which
+ the packets will be written (two sniff easily).
+
+ This tool is useful for network debugging and monitoring, and 
+ was NOT designed for malicious usage.
