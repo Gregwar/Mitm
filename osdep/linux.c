@@ -51,7 +51,7 @@
          */
 #include "radiotap/ieee80211_radiotap.h"
 #include "osdep.h"
-#include "pcap.h"
+#include <pcap.h>
 #include "crctable_osdep.h"
 #include "common.h"
 #include "byteorder.h"
