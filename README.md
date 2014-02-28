@@ -38,6 +38,15 @@ Usage: mitm -i interface [-t] ip1 ip2
             replayed packets (in order to sniff)
 ```
 
+For example:
+
+```
+mitm -i wlan0 -t 192.168.1.1 192.168.1.10
+``
+
+Will run ARP poison `192.168.1.1` and `192.168.1.10`. All the replayed
+packets will be available in the pseudo-interface `mitm0`.
+
 ## License
 
 This is under the MIT license
