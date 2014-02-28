@@ -13,30 +13,30 @@
 #define	ARPOP_NAK	10		/* (ATM)ARP NAK			*/
 
 struct eth_header {
-	unsigned char		target[ETH_ALEN];
-	unsigned char		source[ETH_ALEN];
-	unsigned short		proto;
+    unsigned char		target[ETH_ALEN];
+    unsigned char		source[ETH_ALEN];
+    unsigned short		proto;
 };
 
 struct arp_packet
 {
-	struct eth_header eth;	
+    struct eth_header eth;	
 
-        unsigned short          ar_hrd;         /* format of hardware address   */
-        unsigned short         	ar_pro;         /* format of protocol address   */
-        unsigned char   	ar_hln;         /* length of hardware address   */
-        unsigned char   	ar_pln;         /* length of protocol address   */
-        unsigned short          ar_op;          /* ARP opcode (command)         */
+    unsigned short          ar_hrd;         /* format of hardware address   */
+    unsigned short         	ar_pro;         /* format of protocol address   */
+    unsigned char   	ar_hln;         /* length of hardware address   */
+    unsigned char   	ar_pln;         /* length of protocol address   */
+    unsigned short          ar_op;          /* ARP opcode (command)         */
 
-        unsigned char           ar_sha[ETH_ALEN];       /* sender hardware address      */
-        unsigned char           ar_sip[4];              /* sender IP address            */
-        unsigned char           ar_tha[ETH_ALEN];       /* target hardware address      */
-        unsigned char           ar_tip[4];              /* target IP address            */
+    unsigned char           ar_sha[ETH_ALEN];       /* sender hardware address      */
+    unsigned char           ar_sip[4];              /* sender IP address            */
+    unsigned char           ar_tha[ETH_ALEN];       /* target hardware address      */
+    unsigned char           ar_tip[4];              /* target IP address            */
 };
 
 struct macip {
-	unsigned char mac[6];
-	unsigned char ip[4];
+    unsigned char mac[6];
+    unsigned char ip[4];
 };
 
 unsigned char mitm_IPbuf[0xFF];
