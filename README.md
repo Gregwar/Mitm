@@ -44,7 +44,7 @@ For example:
 mitm -i wlan0 -t 192.168.1.1 192.168.1.10
 ```
 
-Will run ARP poison `192.168.1.1` and `192.168.1.10`. All the replayed
+Will ARP poison `192.168.1.1` and `192.168.1.10`. All the replayed
 packets will be available in the pseudo-interface `mitm0`.
 
 ## License
