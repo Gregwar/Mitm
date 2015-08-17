@@ -8,6 +8,10 @@
 #ifndef __AIRCRACK_NG_OSEDEP_H__
 #define __AIRCRACK_NG_OSEDEP_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <netinet/in.h>
 #include <stdint.h>
 
@@ -132,5 +136,9 @@ extern int ti_read(struct tif *ti, void *buf, int len);
 extern int ti_write(struct tif *ti, void *buf, int len);
 extern int ti_set_mac(struct tif *ti, unsigned char *mac);
 extern int ti_set_ip(struct tif *ti, struct in_addr *ip);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __AIRCRACK_NG_OSEDEP_H__ */
