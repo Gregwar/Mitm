@@ -59,7 +59,7 @@ static int ti_do_open_linux(struct tif *ti, char *name)
     }
 
     memset( &if_request, 0, sizeof( if_request ) );
-    if_request.ifr_flags = IFF_TAP | IFF_NO_PI;
+    if_request.ifr_flags = IFF_TAP | IFF_NO_PI | IFF_UP;
     strncpy( if_request.ifr_name, "mitm%d", IFNAMSIZ );
     if( ioctl( fd_tap, TUNSETIFF, (void *)&if_request ) < 0 )
     {
