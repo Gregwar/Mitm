@@ -491,16 +491,7 @@ void *mitm_sniffer(void*d) {
             mitm_packets_replayed++;
             sendto(sock,buffer, n, 0, (struct sockaddr*)&addr, sizeof(struct sockaddr_ll));
             if (tunneling) {
-                if (vid == 1) {
-                    for (int i=0; i<6; i++) {
-                        eth->source[i] = victimA.mac[i];
-                    }
-                } else {
-                    for (int i=0; i<6; i++) {
-                        eth->source[i] = victimB.mac[i];
-                    }
-                }
-                ti_write(ifreplay, buffer, n);
+                ti_write(ifreplay, buffer+sizeof(struct eth_header), n-sizeof(struct eth_header));
             }
         }
         if (n <= 0) {
